@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <title>Bazar Oyunu</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        button {
+            font-size: 1.5em;
+            margin: 20px;
+            padding: 15px 30px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+        }
+        #yesBtn {
+            background-color: #28a745;
+            color: white;
+        }
+        #noBtn {
+            background-color: #dc3545;
+            color: white;
+        }
+        #response {
+            margin-top: 40px;
+            font-size: 2em;
+            color: #ffc107;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bu Bazar oyunu udmaq isteyirsen?</h1>
+    <button id="yesBtn" onclick="answerYes()">Hə</button>
+    <button id="noBtn" onclick="answerNo()">Yox</button>
+    <div id="response"></div>
+
+    <audio id="lionSound" src="lion.mp3"></audio>
+    <audio id="fartSound" src="fart.mp3"></audio>
+
+    <script>
+        function answerYes() {
+            document.getElementById('lionSound').play();
+            document.getElementById('response').innerHTML = "Onda mənlə bir komanda ol";
+        }
+
+        function answerNo() {
+            document.getElementById('fartSound').play();
+            document.getElementById('response').innerHTML = "Looserrr 😭😭😭";
+        }
+    </script>
+</body>
+</html>
